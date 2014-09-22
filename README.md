@@ -20,7 +20,8 @@ View on [npm](https://www.npmjs.org/package/css-floats)
 ## File Size
 
 598B floats.css
-459B floats.min.css
+459B floats.min.css 
+164B minified and gzipped
 
 ## The Code
 ```
