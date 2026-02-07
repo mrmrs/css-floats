@@ -8,9 +8,9 @@
 .fn { float: none; }
 
 @media screen and (min-width: 48em) {
-  .fl-ns { float: left;  display: inline; }
-  .fr-ns { float: right; display: inline; }
-  .fn-ns { float: none; }
+  .fl-s { float: left;  display: inline; }
+  .fr-s { float: right; display: inline; }
+  .fn-s { float: none; }
 }
 
 @media screen and (min-width:48em) and (max-width: 64em) {
