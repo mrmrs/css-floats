@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('lightningcss');
 
-const srcFile = path.join(__dirname, 'src', 'css-floats.css');
+const srcFile = path.join(__dirname, 'src', 'floats.css');
 const distDir = path.join(__dirname, 'dist');
 
 // Read source
@@ -15,22 +15,22 @@ if (!fs.existsSync(distDir)) {
 
 // Unminified — just normalize formatting
 const { code: unminified } = transform({
-  filename: 'css-floats.css',
+  filename: 'floats.css',
   code: Buffer.from(source),
   minify: false,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-floats.css'), unminified);
+fs.writeFileSync(path.join(distDir, 'floats.css'), unminified);
 
 // Minified
 const { code: minified } = transform({
-  filename: 'css-floats.css',
+  filename: 'floats.css',
   code: Buffer.from(source),
   minify: true,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-floats.min.css'), minified);
+fs.writeFileSync(path.join(distDir, 'floats.min.css'), minified);
 
 console.log('Build complete:');
-console.log(`  dist/css-floats.css     ${unminified.length} bytes`);
-console.log(`  dist/css-floats.min.css ${minified.length} bytes`);
+console.log(`  dist/floats.css     ${unminified.length} bytes`);
+console.log(`  dist/floats.min.css ${minified.length} bytes`);
